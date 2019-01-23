@@ -18,7 +18,7 @@ fi
 # 备份文件目录是否存在
 if [ ! -d $BACK_DIR ];then
         mkdir -p $BACK_DIR
-        echo -e "\033[32mThe $BACK_DIR crate successfull"
+        echo -e "\033[32mThe $BACK_DIR crate successfull\033[0m"
 else
         echo "This $BACK_DIR is exists..."
 fi
@@ -28,7 +28,7 @@ $MYSQLCMD -u$MYSQLUSR -p$MYSQLPW -d $MYSQLDB > $BACK_DIR/$MYSQLDB.sql
 
 # 判断命令是否执行成功
 if [ $? -eq 0 ];then
-        echo -e "\033[32mThe mysql backup success"
+        echo -e "\033[32mThe mysql backup success\033[0m"
 else
         echo "the mysql backup failed"
 fi
