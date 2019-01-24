@@ -32,3 +32,10 @@ fi
 -a 双方都成立(and)
 -o 单方成立(or)
 -z 空字符串
+
+# for 循环
+
+for 变量 in 字符串
+	do
+		语句1
+	done
