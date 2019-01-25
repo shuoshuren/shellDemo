@@ -44,3 +44,9 @@ until 条件
 do 
 	action
 done
+
+# while 循环
+while 条件语句
+do 
+	语句1
+done
