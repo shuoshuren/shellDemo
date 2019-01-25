@@ -39,3 +39,8 @@ for 变量 in 字符串
 	do
 		语句1
 	done
+# until 循环
+until 条件
+do 
+	action
+done
