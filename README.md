@@ -51,3 +51,23 @@ until 条件
 do 
 	action
 done
+
+# case 选择语句
+case $arg in
+	pattern1)
+	语句1
+	;;
+	pattern2)
+	语句2
+	;;
+	*)
+	语句3
+	；；
+
+# select 选择语句
+select 一般用于选择菜单的创建，配合PS3做菜单的打印输出
+
+select i in "选项..."
+do
+	语句
+done
