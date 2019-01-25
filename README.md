@@ -39,14 +39,15 @@ for 变量 in 字符串
 	do
 		语句1
 	done
-# until 循环
-until 条件
-do 
-	action
-done
 
 # while 循环
 while 条件语句
 do 
 	语句1
+done
+
+# until 循环:满足条件才退出，否则执行action
+until 条件
+do 
+	action
 done
