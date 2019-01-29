@@ -1,22 +1,10 @@
-#!/bin/bash
-# define path variables
-# by author xuechao 2019
-A=123
+#!/bin/sh
+# 定义变量并引用
 
-# echo "this is my first shell var :$A"
+name='xuechao\r\n\t' # 字符串类型，不解析任何字符
+address="成都\" $name " # 双引号内部会解析$和反斜杠特殊字符
+date_cmd=`date` # 反引号执行系统命令
 
-name=xuechao
-
-echo "My name is $name"
-echo "uid:$UID"
-echo "pwd:$PWD"
-
-echo "#############"
-
-echo "当前文件名：$0"
-echo "第一个参数：$1"
-
-echo "----------------"
-echo "命令执行的结果 \$? is $?"
-echo "命令所有参数 \$* is $*"
-echo "命令参数个数\$# is $#"
+echo "name:$name"
+echo "address:${address}"
+echo "date:$date_cmd"
