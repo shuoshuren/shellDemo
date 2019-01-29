@@ -68,18 +68,23 @@ delimiter
 可以自定义定界符，定界符后的单词作为各行结束的定界付，，结束时的定界符一定顶格写
 
 # 运算操作
-let：执行整数相关的运算，运算结果也只能保存整数
-let 变量名=变量1 (+,-,*,/,%) 变量1
+## let
+执行整数相关的运算，运算结果也只能保存整数  
+`let 变量名=变量1 (+,-,*,/,%) 变量1`
 
-expr:算数运算时，只能进行整数类型的运算，不能保存小数结果，此外还可以进行字符串操作
-expr experession1 操作符 experession2
+## expr
+算数运算时，只能进行整数类型的运算，不能保存小数结果，此外还可以进行字符串操作  
+`expr experession1 操作符 experession2`     
 操作符钱必须加‘\’进行转义，并且操作符和两个expression之间必须有空格
 
-bc:进行浮点运算，常用在管道中
-variable = `echo "OPTIONS; OPERRATIONS" | bc` ,scale用来指定输出小数的位数
-eg:n=`echo "scale=3; 20/3" | bc`
+## bc
+进行浮点运算，常用在管道中  
+```
+variable = `echo "OPTIONS; OPERRATIONS" | bc` 
+```,scale用来指定输出小数的位数     
 
-字符串操作：
+
+# 字符串操作
 expr: 输出字符串长度 ：expr length $str
 取子串的操作:expr substr $string $postion $length (下标从1开始)或者echo ${string:$pos:$length} （下标从0开始）
 字符串连接：str3="${str1}$str2"
