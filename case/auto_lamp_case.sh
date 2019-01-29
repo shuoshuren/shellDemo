@@ -1,7 +1,7 @@
 #!/bin/bash
 # case 写lamp菜单
 
-case $i in
+case $1 in
         apache )
                 echo "install apache"
         ;;

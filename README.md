@@ -168,6 +168,7 @@ case $arg in
 	*)
 	语句3
 	;;
+esac
 ```
 
 # select 选择语句
