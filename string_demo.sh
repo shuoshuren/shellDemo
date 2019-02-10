@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 # 字符串操作
 str="helloWorld,好好学习"
-length=`expr length $str `
+length=`expr length $str`
 echo "字符串长度：$length"
 echo "取子串：`expr substr $str 1 5`"
 echo "取子串：`echo ${str:0:5}`"

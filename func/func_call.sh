@@ -1,6 +1,6 @@
 #!/bin/sh
 # 函数的载入与调用
-. ./func3.sh
+. ./func_md5_mac.sh
 
 while [ 1 ]
 do

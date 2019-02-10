@@ -65,7 +65,7 @@ command << delimiter
     document
 delimiter
 ```
-可以自定义定界符，定界符后的单词作为各行结束的定界付，，结束时的定界符一定顶格写
+可以自定义定界符，定界符后的单词作为各行结束的定界符，，结束时的定界符一定顶格写
 
 # 运算操作
 ## let
@@ -75,7 +75,7 @@ delimiter
 ## expr
 算数运算时，只能进行整数类型的运算，不能保存小数结果，此外还可以进行字符串操作  
 `expr experession1 操作符 experession2`     
-操作符钱必须加‘\’进行转义，并且操作符和两个expression之间必须有空格
+操作符前必须加‘\’进行转义，并且操作符和两个expression之间必须有空格
 
 ## bc
 进行浮点运算，常用在管道中  
@@ -123,16 +123,43 @@ scale用来指定输出小数的位数
 #if
 if条件判断语句
 ```
-if（表达式）;then
+if（表达式）
+then
     语句1
+elif
+then
+    语句2
 else
-	语句2
+	语句3
 fi
 ```
 
+# case 选择语句
+```
+case $arg in
+    pattern1)
+    语句1
+    ;;
+    pattern2)
+    语句2
+    ;;
+    *)
+    语句3
+    ;;
+esac
+```
 
+# select 选择语句
+select 一般用于选择菜单的创建，配合PS3做菜单的打印输出
+```
+select i in "选项..."
+do
+    语句
+done
+```
 
 # for 循环
+## 遍历或列表循环
 ```
 for 变量 in 字符串
 	do
@@ -156,29 +183,7 @@ do
 done
 ```
 
-# case 选择语句
-```
-case $arg in
-	pattern1)
-	语句1
-	;;
-	pattern2)
-	语句2
-	;;
-	*)
-	语句3
-	;;
-esac
-```
 
-# select 选择语句
-select 一般用于选择菜单的创建，配合PS3做菜单的打印输出
-```
-select i in "选项..."
-do
-	语句
-done
-```
 # break和continue
 break:退出当前循环并将控制权传递到本循环后面的第一个命令    
 continue:忽略本次循环的剩余命令，将控制权交给循环的顶部     

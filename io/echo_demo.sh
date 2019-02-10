@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # echo 输出的使用
 
 name="张三"
