@@ -166,6 +166,13 @@ for 变量 in 字符串
 		语句1
 	done
 ```
+## c语言风格的循环
+```
+for ((expr1;expr2;expr3))
+do
+    语句
+done
+```
 
 # while 循环
 ```
